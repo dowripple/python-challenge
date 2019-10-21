@@ -26,12 +26,12 @@ Summary<br/>
 The "main.py" program loops through the election file "election_data.csv" and does these things:<br/>
 •	creates a list of dictionaries (keys: "name", "votes") called candidates<br/>
 •	this is accomplished by looping through the candidates list for each row<br/>
-&nbsp&nbspo	if the row's candidate does not exist in the current dictionary "candidate", then append a new dictionary with votes of 0<br/>
+  o	if the row's candidate does not exist in the current dictionary "candidate", then append a new dictionary with votes of 0<br/>
 •	if the row's candidate matches the dictionary candidate's name, then increment their vote counter (i.e. "candidate["votes"] += 1")<br/>
 •	totalVotes is incremented by 1<br/>
 •	once file is processed, the first part of the results are printed to screen (totalVotes)<br/>
 •	the program then loops through the list of dictionaries "candidates"<br/>
-&nbsp&nbspo	their % of the total vote is calculated<br/>
-&nbsp&nbspo	the winning candidate is found out via a simple conditional<br/>
-&nbsp&nbspo	1 row per candidate is printed out, showing: name, %vote (#votes)<br/>
+  o	their % of the total vote is calculated<br/>
+  o	the winning candidate is found out via a simple conditional<br/>
+  o	1 row per candidate is printed out, showing: name, %vote (#votes)<br/>
 •	The program finishes by writing out the results.txt file, repeating the process of printing (the exception being not figuring out the winner again)

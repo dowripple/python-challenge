@@ -57,7 +57,7 @@ with open(budget_csv, 'r') as csvfile:
 
             #append the change to the list so we can average it later
             changes.append(change)
-            
+
             #see if the change is the largets increase or decrease, then record the values
             if change > greatestIncreaseValue:
                 greatestIncreaseValue = change
@@ -87,6 +87,20 @@ with open(budget_csv, 'r') as csvfile:
     print(f'Average Change: ${averageChange}')
     print(f'Greatest Increasse in Profits: {greatestIncreaseMonth} (${greatestIncreaseValue})')
     print(f'Greatest Decrease in Profits: {greatestDecreaseMonth} (${greatestDecreaseValue})')
+
+    #create a text file for results
+    with open("results.txt", 'w') as resultFile:
+
+        #write the same information to the new file, adding \n for new line    
+        resultFile.write("Financial Analysis\n")
+        resultFile.write("-------------------------------\n")
+        resultFile.write("Total Months: " + str(numberOfMonths)+"\n")
+        resultFile.write("Total: $" + str(totalProfitLoss)+"\n")
+        resultFile.write("Average Change: $" + str(averageChange)+"\n")
+        resultFile.write("Greatest Increase in Profits: " + greatestIncreaseMonth + " ($" + str(greatestIncreaseValue) + ")\n")
+        resultFile.write("Greatest Decrease in Profits: " + greatestDecreaseMonth + " ($" + str(greatestDecreaseValue) + ")\n")
+
+    
 
 
 

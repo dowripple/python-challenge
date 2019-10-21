@@ -11,7 +11,7 @@ The "main.py" program loops through the "budget_data.csv" file, and does these t
 •	calculates a change value (starting at the 2nd month, current month P&L - previous month P&L)<br/>
 •	creates a list of P&L change values (to be averaged later)<br/>
 •	captures the greatest increase and decrease by basic conditional (i.e. "if change > int(row[1])"<br/>
-•	counts the number of months through a basic iterator (i.e. "nuberOfMonths += 1 ")<br/>
+•	counts the number of months through a basic iterator (i.e. "numberOfMonths += 1 ")<br/>
 •	summarizes all of the profit/loss values (i.e. "totalProfitLoss += int(row[1])")<br/>
 •	using defined function "average", gets the average of the values in the change list<br/>
 •	prints out results to screen<br/>
